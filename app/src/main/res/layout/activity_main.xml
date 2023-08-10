@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="ExtraText">
+
+    <!-- Judul "Rm Sedap Rasa" berada di center -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="RM Sedap Rasa"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        />
+
+    <!-- Gambar dengan ukuran 300x200 -->
+    <ImageView
+        android:id="@+id/ivRestaurantImage"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/restaurant_image"
+        android:layout_marginTop="20dp" />
+
+    <!-- Ikon email, phone, dan location secara horizontal -->
+    <LinearLayout
+        android:id="@+id/llIcons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivRestaurantImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp">
+
+        <ImageView
+            android:id="@+id/icEmail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_email"
+            android:layout_marginEnd="20dp" />
+
+        <ImageView
+            android:id="@+id/icPhone"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_phone"
+            android:layout_marginEnd="20dp" />
+
+        <ImageView
+            android:id="@+id/icLocation"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_loc"
+            android:layout_marginEnd="20dp" />
+
+    </LinearLayout>
+
+    <!-- Judul "Deskripsi :" di bawah ikon -->
+    <TextView
+        android:id="@+id/tvDescriptionTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/llIcons"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="Deskripsi :"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        />
+
+    <!-- Teks deskripsi yang diatur rata kanan-kiri (justify) -->
+    <TextView
+        android:id="@+id/tvDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescriptionTitle"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:justificationMode="inter_word"
+        android:text="Restoran masakan Cina, jenis masakannya variatif dan enak-enak. Harga kaki lima, rasa bintang lima. Satu porsi cukup besar dan bisa dimakan untuk 2 orang ." />
+
+    <!-- Judul "List Menu :" di bawah teks deskripsi -->
+    <TextView
+        android:id="@+id/tvMenuTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDescription"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="List Menu :"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        />
+
+    <!-- ListView untuk menampilkan daftar makanan -->
+        <ListView
+            android:id="@+id/listViewMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMenuTitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:isScrollContainer="false" />
+
+    <!-- Judul "Alamat :" di bawah daftar menu -->
+    <TextView
+        android:id="@+id/tvAlamatTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listViewMenu"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="30dp"
+        android:text="Alamat :"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        />
+
+    <!-- Teks deskripsi alamat -->
+    <TextView
+        android:id="@+id/tvAlamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvAlamatTitle"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:justificationMode="inter_word"
+        android:text="Jl. Imam Bonjol No.207, Pendrikan Kidul, Kec. Semarang Tengah, Kota Semarang, Jawa Tengah 50131, Indonesia" />
+
+        <TextView
+            android:id="@+id/tvJamBukaTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAlamat"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="30dp"
+            android:text="Jam Buka :"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            />
+
+        <!-- ListView untuk menampilkan daftar jam dan hari pelayanan -->
+        <ListView
+            android:id="@+id/listViewJamBuka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvJamBukaTitle"
+            android:layout_marginTop="5dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:isScrollContainer="false" />
+            />
+
+</RelativeLayout>
+
+</ScrollView>
